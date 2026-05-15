@@ -2,64 +2,59 @@
 <html lang="pt-br">
 
 <head>
+
   <meta charset="UTF-8">
+
   <title>Login</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
+  <a href="index.html" class="sair">
+    SAIR
+  </a>
 
-    <div class="logo">
-      LER E EDUCAR
-    </div>
+  <div class="login-box">
 
-  </header>
-
-
-  <!-- CONTEÚDO -->
-  <main class="container">
-
-    <h1>Login</h1>
-
-    <input
-      type="email"
-      id="email"
-      placeholder="Email"
+    <img
+      src="img/logo.png"
+      class="logo"
     >
 
-    <br><br>
+    <label>E-mail</label>
 
-    <input
-      type="password"
-      id="senha"
-      placeholder="Senha"
-    >
+    <input type="email">
 
-    <br><br>
+    <label>Senha</label>
 
-    <button onclick="fazerLogin()">
-      Entrar
-    </button>
+    <input type="password">
 
-  </main>
+    <p class="esqueci">
 
+      Esqueceu a senha?
 
-  <!-- RODAPÉ -->
-  <footer>
+      <a href="esqueciS.html">
+        Clique aqui
+      </a>
 
-    <p>
-      Projeto Biblioteca © 2026
     </p>
 
-  </footer>
+    
+      <button><a href="livros.html" class="fazer login">
+      Fazer Login
+      </a></button>
+    
 
+    <a href="cadastro.html" class="cadastro">
 
-  <!-- JAVASCRIPT -->
-  <script src="js/app.js"></script>
+      Cadastrar nova instituição
+
+    </a>
+
+  </div>
 
 </body>
 </html>
