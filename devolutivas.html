@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Devolução</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/tela-devolucao.css">
+</head>
+<body>
+
+  <nav id="menu-lateral" class="menu-lateral">
+    <div class="fechar-menu" onclick="toggleMenu()">✕</div>
+    <a href="catalogo.html" class="menu-item ativo">CATÁLOGO</a>
+    <a href="perfil-usuario.html" class="menu-item">MEU PERFIL</a>
+    <a href="#" class="menu-item">PRIVACIDADE</a>
+    <a href="reservas.html" class="menu-item">MINHAS RESERVAS</a>
+    <a href="devolutivas.html" class="menu-item">DEVOLUÇÕES</a>
+  </nav>
+
+  <header class="header">
+    <div class="menu-hamburguer" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="logo-header">
+      <img src="img/logo-capa-e-barra-de-pesquisa.png" alt="Logo Ler e Educar" class="logo-img">
+      <span class="logo-text">LER E EDUCAR</span>
+    </div>
+
+    <input type="text" placeholder="Buscar livro..." class="busca">
+
+    <div class="header-direita">
+
+<div class="usuario">Olá, <span id="nome-usuario-logado">Gestor</span></div>
+      <a href="index.html" class="sair">SAIR</a>
+    </div>
+  </header>
+
+
+  <nav class="menu-lateral" id="menuLateral">
+    <a href="#" class="fechar-menu" onclick="toggleMenu()">✕ Fechar</a>
+    <a href="catalogo.html" class="menu-item">CATÁLOGO</a>
+    <a href="perfil-usuario.html" class="menu-item">MEU PERFIL</a>
+    <a href="privacidade.html" class="menu-item">PRIVACIDADE</a>
+    <a href="reservas.html" class="menu-item">MINHAS RESERVAS</a>
+    <a href="devolucoes.html" class="menu-item">DEVOLUÇÕES</a>
+  </nav>
+
+  <main class="devolucoes-bg">
+    <div class="devolucoes-container">
+      
+      <h1 class="devolucoes-titulo">DEVOLUÇÃO</h1>
+
+      <div class="lista-devolucoes">
+        
+        <div class="item-devolucao">
+          <img src="img/livro1.png" alt="História de dois amores" class="capa-livro">
+          <div class="info-devolucao">
+            <h3 class="titulo-livro">HISTÓRIA DE DOIS AMORES</h3>
+            <div class="linha-quantidade-btn">
+              <p class="dado-livro">Qt. 20</p>
+              <button class="btn-devolutiva">FAZER A DEVOLUTIVA</button>
+            </div>
+            <p class="dado-data">Data de devolução: 12/07</p>
+          </div>
+        </div>
+
+        <div class="item-devolucao">
+          <img src="img/livro2.png" alt="A primavera da lagarta" class="capa-livro">
+          <div class="info-devolucao">
+            <h3 class="titulo-livro">A PRIMAVERA DA LAGARTA</h3>
+            <div class="linha-quantidade-btn">
+              <p class="dado-livro">Qt. 12</p>
+              <button class="btn-devolutiva">FAZER A DEVOLUTIVA</button>
+            </div>
+            <p class="dado-data">Data de devolução: 05/07</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

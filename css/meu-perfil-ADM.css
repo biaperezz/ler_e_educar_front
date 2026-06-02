@@ -1,0 +1,41 @@
+.content {
+    padding: 45px 110px;
+}
+
+.content h1 {
+    font-size: 62px;
+    color: #5A2A00;
+}
+
+.subtitle {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.input-group {
+    margin-bottom: 38px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 480px;
+    height: 45px;
+    background: rgba(255,255,255,0.75);
+    border: none;
+    padding: 10px 15px;
+}
+
+.small-input input {
+    width: 200px;
+}

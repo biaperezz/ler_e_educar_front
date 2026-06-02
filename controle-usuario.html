@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Usuário</title>
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/controle-usuario.css">
+</head>
+
+<body>
+
+    <!-- MENU PADRÃO -->
+    <nav id="menu-lateral" class="menu-lateral">
+
+        <div class="fechar-menu" onclick="toggleMenu()">✕</div>
+
+        <a href="catalogo.html" class="menu-item">CATÁLOGO</a>
+        <a href="perfil-usuario.html" class="menu-item">MEU PERFIL</a>
+        <a href="privacidade.html" class="menu-item">PRIVACIDADE</a>
+        <a href="reservas.html" class="menu-item">MINHAS RESERVAS</a>
+        <a href="devolucoes.html" class="menu-item">DEVOLUÇÕES</a>
+
+    </nav>
+
+    <!-- HEADER PADRÃO -->
+    <header class="header">
+
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo-header">
+            <img src="img/logo-capa-e-barra-de-pesquisa.png"
+                 alt="Logo"
+                 class="logo-img">
+
+            <span class="logo-text">
+                LER E EDUCAR
+            </span>
+        </div>
+
+        <input type="text"
+               placeholder="Buscar instituição..."
+               class="busca">
+
+        <div class="header-direita">
+
+            <div class="usuario">
+                Olá,
+                <span id="nome-usuario-logado">
+                    Administrador
+                </span>
+            </div>
+
+            <a href="index.html" class="sair">
+                SAIR
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="pagina-usuarios">
+
+        <div class="usuarios-container">
+
+            <h1>CONTROLE DE USUÁRIO</h1>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Instituição</th>
+                            <th>CNPJ</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Escola Municipal Ler e Educar</td>
+                            <td>12.345.678/0001-90</td>
+                            <td>contato@escola.com</td>
+                            <td>
+                                <span class="status ativo">
+                                    Inativo
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+
+                                <button class="btn-editar">
+                                    Excluir
+                                </button>
+                            </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>Colégio Saber</td>
+                            <td>98.765.432/0001-10</td>
+                            <td>contato@colegio.com</td>
+                            <td>
+                                <span class="status pendente">
+                                    Ativo
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+
+                                <button class="btn-editar">
+                                    Excluir
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/layout.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Livros</title>
+
+    <!-- CSS PADRÃO -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- CSS ESPECÍFICO DA PÁGINA -->
+    <link rel="stylesheet" href="css/adicionar-livro.css">
+</head>
+
+<body>
+
+    <!-- MENU LATERAL PADRÃO -->
+    <nav id="menu-lateral" class="menu-lateral">
+        <div class="fechar-menu" onclick="toggleMenu()">✕</div>
+
+        <a href="catalogo.html" class="menu-item">CATÁLOGO</a>
+        <a href="perfil-usuario.html" class="menu-item">MEU PERFIL</a>
+        <a href="privacidade.html" class="menu-item">PRIVACIDADE</a>
+        <a href="reservas.html" class="menu-item">MINHAS RESERVAS</a>
+        <a href="devolucoes.html" class="menu-item">DEVOLUÇÕES</a>
+    </nav>
+
+    <!-- HEADER PADRÃO -->
+    <header class="header">
+
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo-header">
+            <img src="img/logo-capa-e-barra-de-pesquisa.png"
+                 alt="Logo Ler e Educar"
+                 class="logo-img">
+
+            <span class="logo-text">LER E EDUCAR</span>
+        </div>
+
+        <input type="text"
+               placeholder="Buscar livro..."
+               class="busca">
+
+        <div class="header-direita">
+            <div class="usuario">
+                Olá,
+                <span id="nome-usuario-logado">
+                    Administrador
+                </span>
+            </div>
+
+            <a href="index.html" class="sair">
+                SAIR
+            </a>
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO DA PÁGINA -->
+    <main class="pagina-adicionar-livro">
+
+        <div class="formulario-container">
+
+            <h1>ADICIONAR LIVROS</h1>
+
+            <p class="subtitulo">
+                Insira as informações do livro
+            </p>
+
+            <form class="form-livro">
+
+                <div class="coluna-formulario">
+
+                    <div class="input-group">
+                        <label>Título</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Autor</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Editora</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label>ISBN</label>
+                        <input type="text">
+                    </div>
+
+                </div>
+
+                <div class="coluna-formulario">
+
+                    <div class="input-group">
+                        <label>Gênero</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Ano de Publicação</label>
+                        <input type="text" placeholder="00/00/0000">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Quantidade</label>
+                        <input type="number">
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+    
+    <script src="js/layout.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

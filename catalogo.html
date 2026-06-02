@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+  <nav id="menu-lateral" class="menu-lateral">
+    <div class="fechar-menu" onclick="toggleMenu()">✕</div>
+    <a href="catalogo.html" class="menu-item ativo">CATÁLOGO</a>
+    <a href="perfil-usuario.html" class="menu-item">MEU PERFIL</a>
+    <a href="reservas.html" class="menu-item">MINHAS RESERVAS</a>
+    <a href="devolucao.html" class="menu-item">DEVOLUÇÕES</a>
+  </nav>
+
+  <header class="header">
+    <div class="menu-hamburguer" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="logo-header">
+      <img src="img/logo-capa-e-barra-de-pesquisa.png" alt="Logo Ler e Educar" class="logo-img">
+      <span class="logo-text">LER E EDUCAR</span>
+    </div>
+
+    <input type="text" placeholder="Buscar livro..." class="busca">
+
+    <div class="header-direita">
+
+<div class="usuario">Olá, <span id="nome-usuario-logado">Gestor</span></div>
+      <a href="index.html" class="sair">SAIR</a>
+    </div>
+  </header>
+
+ <main class="catalogo-container">
+
+    <section class="categoria">
+      <h2>CONTO DE FADAS</h2>
+      <div class="livros-grid-wrapper">
+        <div class="livros-grid">
+          <div class="livro-card" onclick="abrirModal()">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>História de Dois Amores</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>365 atividades divertidas</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>Montessori Meu Primeiro Livro de Atividades... Corpo Humano</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>O que os Olhos não Veem</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>Projeto Presente - História e Geografia - 5º ano - 6ª Edição</h3>
+          </div>
+        </div>
+        <a href="categoria.html?tema=conto-de-fadas" class="btn-ver-mais">+</a>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>CIÊNCIAS DA NATUREZA</h2>
+      <div class="livros-grid-wrapper">
+        <div class="livros-grid">
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>365 atividades divertidas</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>Projeto Presente - História e Geografia - 5º ano - 6ª Edição</h3>
+          </div>
+        </div>
+        <a href="categoria.html?tema=ciencias-da-natureza" class="btn-ver-mais">+</a>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>ALFABETIZAÇÃO E LETRAMENTO</h2>
+      <div class="livros-grid-wrapper">
+        <div class="livros-grid">
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>365 atividades para professores</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>999 atividades educativas</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>Universo maker na educação</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>Uma viagem pelo mundo dos livros</h3>
+          </div>
+        </div>
+        <a href="categoria.html?tema=alfabetizacao" class="btn-ver-mais">+</a>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>FÁBULAS</h2>
+      <div class="livros-grid-wrapper">
+        <div class="livros-grid">
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>A primavera da lagarta</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>O homem que amava caixas</h3>
+          </div>
+          <div class="livro-card">
+            <div class="capa-placeholder">Capa do Livro</div>
+            <h3>Bisa Bia, Bisa Bel</h3>
+          </div>
+        </div>
+        <a href="categoria.html?tema=fabulas" class="btn-ver-mais">+</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="modal-livro" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal()">X</span>
+      <div class="modal-info">
+        <div class="capa-placeholder" style="width: 250px; height: 350px;">Capa do Livro</div>
+        <div class="modal-texto">
+          <h2>HISTÓRIA DE DOIS AMORES</h2>
+          <p><strong>Texto:</strong> Carlos Drummond de Andrade</p>
+          <p><strong>Ilustração:</strong> Ziraldo</p>
+          <p><strong>Editora:</strong> Companhia das Letrinhas</p>
+          <p><strong>Faixa etária:</strong> 9+</p>
+          <p><strong>Ano:</strong> 2013</p>
+          <p><strong>Páginas:</strong> 64</p>
+          <button class="btn-reserva">Solicitar reserva</button>
+        </div>
+      </div>
+      <div class="descricao">
+        <p>Fábulas e história de animais, livro ilustrado.</p>
+        
+        <span class="texto-resumo">
+          Os altos e baixos de uma amizade inusitada entre uma pulga (ou melhor, um pulgo) e um elefante mostram que o antídoto para a dificuldade é apenas um: o amor.
+        </span>
+
+        <span id="texto-completo" class="texto-extra">
+            Imagine como é viver com a pulga atrás da orelha? Um pulgo encontrou na orelha de um elefante o melhor lugar para viver e se encheu de vaidade, tendo em vista que era o líder da manada. Viveu algum tempo ali sem ser notado, até que Osbó, o elefante, se vê em apuros e Pul, o pulgo, o socorre. A partir daí, se estabelece uma amizade inusitada entre os dois, que passa por guerra e crise de ciúme.
+            Osbó e Pul, como bons amigos, cuidam um do outro e apreciam suas companhias. Porém, a convivência diária e os defeitos trazidos à tona provocam desgastes ao relacionamento. Partindo da ideia de que gente feliz não incomoda, ou não se incomoda, um dos amigos vai em busca de sua felicidade e tira o foco dos problemas. O outro amigo, por sua vez, se vê deixado de lado e sente ciúmes. Com carinho e paciência, o entendimento é restabelecido e aquele que se sentiu só também vai em busca da sua própria realização. A história de dois amores trata tanto do amor romântico quanto do amor entre amigos.
+            A primeira edição foi publicada em 1985, já com as imagens de Ziraldo. O livro apresenta a complexidade das relações a partir de personagens com personalidades e comportamentos múltiplos, evocando defeitos e qualidades de cada um. Tão característico de Drummond, as reflexões pululam pela narrativa. E, nesta história, a resolução dos problemas se dá por meio do amor.        </span>
+
+        <a href="javascript:void(0)" id="btn-ler-mais" onclick="expandirTexto()" class="link-ver-mais">(Ver Mais)</a>
+      </div>
+
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

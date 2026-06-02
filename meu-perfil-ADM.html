@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Administrador</title>
+      <link rel="stylesheet" href="css/layout.css">
+      <link rel="stylesheet" href="css/stylet.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="meu-perfil.html">MEU PERFIL</a></li>
+            <li><a href="adicionar-livro.html">ADICIONAR LIVROS</a></li>
+            <li><a href="emprestimo.html">EMPRÉSTIMO</a></li>
+            <li><a href="devolucao.html">DEVOLUÇÃO</a></li>
+            <li><a href="controle-estoque.html">CONTROLE DE ESTOQUE</a></li>
+            <li><a href="controle-usuario.html">CONTROLE DE USUÁRIO</a></li>
+        </ul>
+    </aside>
+    <main class="container">
+        <header class="navbar">
+            <div class="menu-icon" id="menuBtn"><span></span><span></span><span></span></div>
+            <div class="logo-area"><img src="img/logo-capa-e-barra-de-pesquisa.png" alt=""></div>
+            <div class="search-area"><input type="text" placeholder="Buscar livro"></div>
+            <div class="right-navbar">
+                <a href="#" class="logout">SAIR</a>
+                <div class="admin-info"><p>Olá,</p><span id="adminName"></span></div>
+            </div>
+        </header>
+        <section class="content">
+            <h1>MEU PERFIL - ADMINISTRADOR</h1>
+            <p class="subtitle">Meus dados</p>
+            <div class="form-container">
+                <div class="left-form">
+                    <div class="input-group"><label>Nome completo</label><input type="text" id="nomeCompleto"></div>
+                    <div class="input-group"><label>CPF</label><input type="text" id="cpf"></div>
+                    <div class="input-group"><label>E-mail</label><input type="email" id="email"></div>
+                    <div class="input-group"><label>Telefone</label><input type="text" id="telefone"></div>
+                </div>
+                <div class="right-form">
+                    <div class="input-group small-input"><label>Data de admissão</label><input type="text" placeholder="DD/MM/AAAA" id="dataAdmissao"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

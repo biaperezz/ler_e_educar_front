@@ -1,0 +1,126 @@
+/* ==========================
+   HEADER PADRÃO
+========================== */
+
+.header {
+  background-color: #9b7b5d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  color: white;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* MENU HAMBÚRGUER */
+
+.menu-hamburguer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-hamburguer span {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* LOGO */
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 35px;
+  width: auto;
+}
+
+.logo-text {
+  color: #EADCC9;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* BARRA DE PESQUISA */
+
+.busca {
+  width: 350px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+/* LADO DIREITO */
+
+.header-direita {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.usuario {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sair {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ==========================
+   MENU LATERAL
+========================== */
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100%;
+  background-color: #7b5a3c;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out;
+}
+
+.menu-lateral.aberto {
+  left: 0;
+}
+
+.fechar-menu {
+  align-self: flex-end;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  color: #e3d5c5;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.menu-item:hover,
+.menu-item.ativo {
+  background-color: #5a3f28;
+  color: white;
+}
