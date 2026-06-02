@@ -17,11 +17,29 @@ body {
    ========================================================================== */
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Logo de um lado, pesquisa do outro */
+  align-items: center;            /* Alinha tudo que está dentro no meio */
+  height: 80px;                   /* Altura do topo marrom */
   background-color: #8b6c51;
   padding: 25px 60px;
   color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Mudamos de 'center' para 'baseline' */
+    gap: 15px;        /* Dá um espaço horizontal entre a imagem e o texto */
+}
+
+.logo-texto {
+    color: #e9decf;             /* Cor bege clara/dourada similar à imagem */
+    font-family: 'Georgia', 'Times New Roman', serif; /* Fonte com serifa elegante */
+    font-size: 1.2rem;          /* Tamanho do texto */
+    font-weight: bold;          /* Deixa em negrito */
+    letter-spacing: 1px;
+    
+    position: relative;
+    top: -8px;
 }
 
 /* Container que agrupa o hambúrguer e a logo */
