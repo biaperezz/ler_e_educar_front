@@ -124,3 +124,27 @@
   background-color: #5a3f28;
   color: white;
 }
+
+.acoes-admin{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+}
+
+.btn-editar{
+  background:#9b7b5d;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+.btn-excluir{
+  background:#8B0000;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:25px;
+  cursor:pointer;
+}

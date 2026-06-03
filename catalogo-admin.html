@@ -9,12 +9,14 @@
 <body>
 
   <nav id="menu-lateral" class="menu-lateral">
-    <div class="fechar-menu" onclick="toggleMenu()">✕</div>
-    <a href="catalogo.html" class="menu-item ativo">CATÁLOGO</a>
-    <a href="perfil-usuario.html" class="menu-item">MEU PERFIL</a>
-    <a href="reservas.html" class="menu-item">MINHAS RESERVAS</a>
-    <a href="devolutivas.html" class="menu-item">DEVOLUÇÕES</a>
-  </nav>
+  <div class="fechar-menu" onclick="toggleMenu()">✕</div>
+  <a href="catalogo-admin.html" class="menu-item">CATÁLOGO</a>
+  <a href="meu-perfil-ADM.html" class="menu-item">MEU PERFIL</a>
+  <a href="adicionar-livro.html" class="menu-item">ADICIONAR LIVROS</a>
+  <a href="emprestimo.html" class="menu-item">EMPRÉSTIMOS</a>
+  <a href="controle-estoque.html" class="menu-item">CONTROLE DE ESTOQUE</a>
+  <a href="controle-usuario.html" class="menu-item">CONTROLE DE USUÁRIOS</a>
+</nav>
 
   <header class="header">
     <div class="menu-hamburguer" onclick="toggleMenu()">
@@ -146,7 +148,10 @@
           <p><strong>Faixa etária:</strong> 9+</p>
           <p><strong>Ano:</strong> 2013</p>
           <p><strong>Páginas:</strong> 64</p>
-          <button class="btn-reserva">Solicitar reserva</button>
+        <div class="acoes-admin">
+            <button class="btn-editar">Editar</button>
+            <button class="btn-excluir">Excluir</button>
+        </div>
         </div>
       </div>
       <div class="descricao">
