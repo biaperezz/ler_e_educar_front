@@ -1,129 +1,88 @@
+// 1. AJUSTADO: Categorias agora usam o mesmo padrão do HTML/Banco (lowercase e hífens)
 const livros = [
-
   {
+    id: 1,
     titulo: "Matemática Divertida",
     autor: "João",
-    categoria: "Alfabetização e Letramento"
+    categoria: "alfabetizacao"
   },
-
   {
+    id: 2,
     titulo: "Ciências Kids",
     autor: "Maria",
-    categoria: "Ciências e Natureza"
+    categoria: "ciencias-natureza"
   },
-
   {
+    id: 3,
     titulo: "Português Fácil",
     autor: "Ana",
-    categoria: "Conto de Fadas"
+    categoria: "conto-de-fadas"
   },
-
   {
+    id: 4,
     titulo: "Peter Pan",
     autor: "Bob",
-    categoria: "História e Cultura"
+    categoria: "conto-de-fadas"
   },
-
   {
+    id: 5,
     titulo: "João e o pé de feijão",
     autor: "João",
-    categoria: "Fábulas"
-  },
-
+    categoria: "fabulas"
+  }
 ];
 
+// 2. OTIMIZADO: Função de mostrar livros usando uma abordagem mais limpa e segura
 function mostrarLivros(listaLivros) {
-
-  const lista =
-    document.getElementById("lista-livros");
+  const lista = document.getElementById("lista-livros");
+  if (!lista) return; // Segurança caso essa função rode em uma página que não tem essa div
 
   lista.innerHTML = "";
 
   listaLivros.forEach(livro => {
-
-    lista.innerHTML += `
-
-      <div class="livro-card">
-
-        <h3>${livro.titulo}</h3>
-
-        <p>${livro.autor}</p>
-
-        <p>${livro.categoria}</p>
-
-      </div>
+    // Cria o elemento na memória primeiro (melhor performance para o banco de dados)
+    const card = document.createElement("div");
+    card.className = "livro-card";
+    
+    // Configura o HTML interno do card de forma organizada
+    card.innerHTML = `
+      <h3>${livro.titulo}</h3>
+      <p><strong>Autor:</strong> ${livro.autor}</p>
+      <p class="tag-categoria">${livro.categoria}</p>
     `;
+
+    lista.appendChild(card);
   });
 }
 
-function filtrarLivros(categoria) {
-
-  const filtrados = livros.filter(livro =>
-
-    livro.categoria === categoria
-  );
-
+// 3. SEGURO: Filtro de livros atualizado
+function filtrarLivros(categoriaTarget) {
+  const filtrados = livros.filter(livro => livro.categoria === categoriaTarget);
   mostrarLivros(filtrados);
 }
 
-mostrarLivros(livros);
+// Inicializa a listagem caso o elemento exista na página atual
+document.addEventListener("DOMContentLoaded", () => {
+  mostrarLivros(livros);
+});
 
-function abrirModal() {
-
-  document.getElementById("modal-livro").style.display = "flex";
-}
-
-function fecharModal() {
-
-  document.getElementById("modal-livro").style.display = "none";
-}
-
+// ==========================================================================
+// CONTROLE DO MENU LATERAL (Seu script inteligente de clique fora)
+// ==========================================================================
 function toggleMenu() {
   const menu = document.getElementById("menu-lateral");
-  menu.classList.toggle("aberto");
+  if (menu) {
+    menu.classList.toggle("ativo"); // Mudado para 'ativo' para bater com o seu CSS padrão anterior
+  }
 }
 
-// Evento para fechar o menu automaticamente ao clicar fora dele
 document.addEventListener('click', function(event) {
   const menu = document.getElementById('menu-lateral');
   const hamburguer = document.querySelector('.menu-hamburguer');
 
-  // Verifica se o menu está aberto antes de fazer qualquer validação
-  if (menu.classList.contains('aberto')) {
-    
-    /* MÁGICA DO FECHAMENTO AUTOMÁTICO:
-       Se o clique NÃO foi dentro do menu lateral E NÃO foi no botão hambúrguer,
-       significa que o usuário clicou na área vazia da página. Então fechamos o menu!
-    */
-    if (!menu.contains(event.target) && !hamburguer.contains(event.target)) {
-      menu.classList.remove('aberto');
+  if (menu && menu.classList.contains('ativo')) {
+    if (!menu.contains(event.target) && (!hamburguer || !hamburguer.contains(event.target))) {
+      menu.classList.remove('ativo');
     }
   }
 });
-function expandirTexto() {
-  const textoCompleto = document.getElementById("texto-completo");
-  const btnLerMais = document.getElementById("btn-ler-mais");
-
-  // Se o texto estiver escondido, mostra ele
-  if (textoCompleto.style.display === "none" || textoCompleto.style.display === "") {
-    textoCompleto.style.display = "inline"; 
-    btnLerMais.innerText = "(Ver Menos)";
-  } else {
-    // Se já estiver aberto, esconde de novo ao clicar
-    textoCompleto.style.display = "none";
-    btnLerMais.innerText = "(Ver Mais)";
-  }
-}
-
-// AJUSTE COMPLEMENTAR: Garanta que sempre que o modal fechar, o texto resete para escondido
-function fecharModal() {
-  document.getElementById("modal-livro").style.display = "none";
-  
-  // Reseta o estado do Ver Mais
-  const textoCompleto = document.getElementById("texto-completo");
-  const btnLerMais = document.getElementById("btn-ler-mais");
-  if(textoCompleto && btnLerMais) {
-    textoCompleto.style.display = "none";
-    btnLerMais.innerText = "(Ver Mais)";
-  }
-}

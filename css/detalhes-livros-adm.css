@@ -1,0 +1,117 @@
+.page-title-center {
+    font-size: 52px;
+    color: #5A2A00;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.book-flex-layout {
+    display: flex;
+    gap: 70px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 90px;
+}
+
+.book-cover-frame {
+    border: 6px solid #4A2306;
+    background: #fff;
+    display: inline-block;
+}
+
+.book-cover-frame img {
+    width: 340px;
+    height: auto;
+    display: block;
+}
+
+.book-details-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.book-main-title {
+    font-size: 42px;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.book-info-list p {
+    font-size: 26px;
+    color: #555555;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.book-info-list strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+.book-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.btn-book-action {
+    width: 250px;
+    height: 60px;
+    background: #907458;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-book-action:hover {
+    background: #7a6148;
+}
+
+.book-synopsis-box {
+    margin-top: 35px;
+    margin-left: 90px;
+    width: calc(100% - 90px);
+}
+
+.book-tags {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.book-text-description {
+    font-size: 24px;
+    color: #000000;
+    line-height: 1.4;
+}
+
+.link-more {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.back-link-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.back-link-btn {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: underline;
+}

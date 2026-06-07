@@ -5,30 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Livros</title>
 
-    <!-- CSS PADRÃO -->
     <link rel="stylesheet" href="css/layout.css">
 
-    <!-- CSS ESPECÍFICO DA PÁGINA -->
     <link rel="stylesheet" href="css/adicionar-livro.css">
 </head>
 
 <body>
 
-    <!-- MENU LATERAL PADRÃO -->
- <nav id="menu-lateral" class="menu-lateral">
-
+    <nav id="menu-lateral" class="menu-lateral">
         <div class="fechar-menu" onclick="toggleMenu()">✕</div>
          <a href="catalogo-admin.html" class="menu-item">CATÁLOGO</a>
-         <a href="meu-perfil-ADM.html" class="menu-item">MEU PERFIL</a>
-         <a href="adicionar-livro.html" class="menu-item">ADICIONAR LIVROS</a>
-         <a href="emprestimo.html" class="menu-item">EMPRÉSTIMOS</a>
-         <a href="controle-estoque.html" class="menu-item">CONTROLE DE ESTOQUE</a>
-         <a href="controle-usuario.html" class="menu-item">CONTROLE DE USUÁRIOS</a>
-        </nav>
+         <a href="meu-perfil-adm.html" class="menu-item ativo">MEU PERFIL</a>
+        <a href="adicionar-livro.html" class="menu-item">ADICIONAR LIVROS</a>
+        <a href="emprestimo.html" class="menu-item">EMPRÉSTIMOS</a>
+        <a href="devolucao.html" class="menu-item">DEVOLUÇÕES</a>
+        <a href="controle-estoque.html" class="menu-item">CONTROLE DE ESTOQUE</a>
+        <a href="controle-usuario.html" class="menu-item">CONTROLE DE USUÁRIOS</a>
 
-    <!-- HEADER PADRÃO -->
     <header class="header">
-
         <div class="menu-hamburguer" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -36,99 +30,101 @@
         </div>
 
         <div class="logo-header">
-            <img src="img/logo-capa-e-barra-de-pesquisa.png"
-                 alt="Logo Ler e Educar"
-                 class="logo-img">
-
+            <img src="img/logo-capa-e-barra-de-pesquisa.png" alt="Logo Ler e Educar" class="logo-img">
             <span class="logo-text">LER E EDUCAR</span>
         </div>
 
-        <input type="text"
-               placeholder="Buscar livro..."
-               class="busca">
+        <input type="text" placeholder="Buscar livro..." class="busca">
 
         <div class="header-direita">
             <div class="usuario">
-                Olá,
-                <span id="nome-usuario-logado">
-                    Administrador
-                </span>
+                Olá, <span id="nome-usuario-logado">Administrador</span>
             </div>
-
-            <a href="index.html" class="sair">
-                SAIR
-            </a>
+            <a href="index.html" class="sair">SAIR</a>
         </div>
-
     </header>
 
-    <!-- CONTEÚDO DA PÁGINA -->
     <main class="pagina-adicionar-livro">
 
-    <h1 class="titulo-pagina">
-        ADICIONAR LIVROS
-    </h1>
+        <h1 class="titulo-pagina">ADICIONAR LIVROS</h1>
+        
+        <form class="form-livro" id="formLivro">
 
-    <form class="form-livro">
+            <div class="coluna-esquerda">
+                <div class="input-group">
+                    <label for="titulo">Nome do livro:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
 
-        <!-- LADO ESQUERDO -->
-        <div class="coluna-esquerda">
+                <div class="input-group">
+                    <label for="autor">Autor:</label>
+                    <input type="text" id="autor" name="autor" required>
+                </div>
 
-            <div class="input-group">
-                <label>Nome do livro:</label>
-                <input type="text">
+                <div class="input-group">
+                    <label for="sinopse">Sinopse do livro:</label>
+                    <textarea id="sinopse" name="sinopse" rows="5" required></textarea>
+                </div>
             </div>
 
-            <div class="input-group">
-                <label>Autor:</label>
-                <input type="text">
+            <div class="coluna-direita">
+                <div class="input-group">
+                    <label for="anoLancamento">Ano de lançamento:</label>
+                    <input type="number" id="anoLancamento" name="anoLancamento" min="1900" max="2100">
+                </div>
+
+                <div class="input-group">
+                    <label for="faixaEtaria">Faixa etária:</label>
+                    <input type="text" id="faixaEtaria" name="faixaEtaria" placeholder="Ex: 8+">
+                </div>
+
+                <div class="input-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" maxlength="13" placeholder="9788535902778">
+                </div>
+
+                <div class="input-group">
+                    <label for="editora">Editora:</label>
+                    <input type="text" id="editora" name="editora" placeholder="Digite o nome da editora" maxlength="100" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="conto-de-fadas">Conto de Fadas</option>
+                        <option value="fabulas">Fábulas</option>
+                        <option value="alfabetizacao">Alfabetização e Letramento</option>
+                        <option value="ciencias-natureza">Ciências da Natureza</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="quantidadeEstoque">Quantidade em estoque:</label>
+                    <input type="number" id="quantidadeEstoque" name="quantidadeEstoque" min="0" step="1" required>
+                </div>
+
+                <div class="upload-capa">
+                    <label for="capaLivro" class="caixa-upload">+</label>
+                    <input type="file" id="capaLivro" name="capaLivro" accept="image/*" hidden>
+                    <span>Capa do livro</span>
+                </div>
+
+                <button type="submit" class="btn-adicionar" id="btnAdicionarLivro">
+                    ADICIONAR AO CATÁLOGO
+                </button>
             </div>
 
-            <div class="input-group">
-                <label>Sinopse do livro:</label>
-                <textarea rows="5"></textarea>
+            <div class="container-btn-salvar">
+                <button type="submit" class="btn-salvar">
+                    Salvar Livro
+                </button>
             </div>
 
-        </div>
-
-        <!-- LADO DIREITO -->
-        <div class="coluna-direita">
-
-            <div class="input-group">
-                <label>Ano de lançamento:</label>
-                <input type="text">
-            </div>
-
-            <div class="input-group">
-                <label>Faixa etária:</label>
-                <input type="text">
-            </div>
-
-            <div class="upload-capa">
-
-                <label for="capaLivro" class="caixa-upload">
-                    +
-                </label>
-
-                <input
-                    type="file"
-                    id="capaLivro"
-                    hidden>
-
-                <span>Capa do livro</span>
-
-            </div>
-
-            <button type="submit" class="btn-adicionar">
-                ADICIONAR AO CATÁLOGO
-            </button>
-
-        </div>
-
-    </form>
-
-</main>
-    
+        </form>
+        
+    </main>
+        
     <script src="js/layout.js"></script>
     <script src="js/app.js"></script>
 

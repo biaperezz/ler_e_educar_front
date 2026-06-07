@@ -23,30 +23,28 @@
     max-width: 500px;
 }
 
-.input-group{
+/* ATUALIZE ESTA REGRA QUE JÁ EXISTE NO SEU CSS: */
+.input-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 35px; /* Aumentado de 25px para 35px para dar mais espaçamento vertical */
 }
 
-.input-group label{
-    font-size: 20px;
+.input-group label {
+    font-size: 22px;       /* Aumentado de 20px para 22px para destacar mais */
     font-weight: bold;
     color: #3d2b1f;
-    margin-bottom: 8px;
+    margin-bottom: 10px;   /* Aumentado levemente para afastar do quadradinho abaixo */
 }
 
-.input-group input,
-.input-group textarea{
+.input-group textarea,
+.input-group select {  /* <-- Adicione o select aqui */
     border: none;
     background: #ededed;
     padding: 12px;
     border-radius: 4px;
     font-size: 15px;
-}
-
-.input-group textarea{
-    resize: none;
+    font-family: Arial, sans-serif; /* Garante a mesma fonte em tudo */
 }
 
 .upload-capa{
@@ -87,4 +85,39 @@
 
 .btn-adicionar:hover{
     opacity: .9;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DO NOVO BOTÃO SALVAR
+   ========================================================================== */
+/* ==========================================================================
+   CORREÇÃO DO BOTÃO SALVAR (NÃO BAGUNÇA AS COLUNAS)
+   ========================================================================== */
+
+/* Este container obriga o flexbox a jogar o botão para baixo e centralizar */
+.container-btn-salvar {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.btn-salvar {
+    width: 100%;
+    max-width: 280px;          /* Tamanho controlado, sem exagero */
+    background-color: #5a3f28; /* Marrom padrão do seu tema */
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-salvar:hover {
+    background-color: #3d2b1f;
+    transform: scale(1.02);    /* Efeito sutil ao passar o mouse */
 }

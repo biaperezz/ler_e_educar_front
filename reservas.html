@@ -9,56 +9,36 @@
 </head>
 <body>
 
- <header class="header">
-
-  <div class="menu-hamburguer" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <div class="logo-header">
-    <img src="img/logo-capa-e-barra-de-pesquisa.png"
-         alt="Logo Ler e Educar"
-         class="logo-img">
-
-    <span class="logo-text">
-      LER E EDUCAR
-    </span>
-  </div>
-
-  <input
-    type="text"
-    placeholder="Buscar livro..."
-    class="busca">
-
-  <div class="header-direita">
-
-    <div class="usuario">
-      Olá,
-      <span id="nome-usuario-logado">
-        Gestor
-      </span>
+  <header class="header">
+    <div class="menu-hamburguer" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <a href="index.html" class="sair">
-      SAIR
-    </a>
+    <div class="logo-header">
+      <img src="img/logo-capa-e-barra-de-pesquisa.png" alt="Logo Ler e Educar" class="logo-img">
+      <span class="logo-text">LER E EDUCAR</span>
+    </div>
 
-  </div>
+    <input type="text" placeholder="Buscar livro..." class="busca">
 
-</header>
+    <div class="header-direita">
+      <div class="usuario">Olá, <span id="nome-usuario-logado">Gestor</span></div>
+      <a href="index.html" class="sair">SAIR</a>
+    </div>
+  </header>
 
-  <div class="alerta-cancelamento" id="alertaCancelado" onclick="fecharAlerta()">
+  <div class="alerta-cancelamento" id="alertaCancelado" onclick="fecharAlerta()" style="display: none;">
     ATENÇÃO: Reserva cancelada! <span>✕</span>
   </div>
 
-   <nav id="menu-lateral" class="menu-lateral">
+  <nav id="menu-lateral" class="menu-lateral">
     <div class="fechar-menu" onclick="toggleMenu()">✕</div>
-    <a href="catalogo.html" class="menu-item ativo">CATÁLOGO</a>
+    <a href="catalogo.html" class="menu-item">CATÁLOGO</a>
     <a href="perfil-usuario.html" class="menu-item">MEU PERFIL</a>
-    <a href="reservas.html" class="menu-item">MINHAS RESERVAS</a>
-    <a href="devolutivas.html" class="menu-item">DEVOLUÇÕES</a>
+    <a href="reservas.html" class="menu-item ativo">MINHAS RESERVAS</a>
+    <a href="devolucao-usuario.html" class="menu-item">DEVOLUÇÕES</a>
   </nav>
 
   <main class="reservas-bg fundo-canva">
@@ -68,49 +48,19 @@
 
       <section class="bloco-reserva">
         <h2>SOLICITAÇÕES:</h2>
-        
-        <div class="item-livro">
-          <img src="img/livro1.png" alt="Capa do Livro" class="capa-livro">
-          
-          <div class="detalhes-livro">
-            <h3 class="titulo-livro">HISTÓRIA DE DOIS AMORES</h3>
-            <p class="info-quantidade">Qt. <span>1+</span></p>
-            
-            <div class="acoes-livro">
-                <div class="grupo-botoes">
-                    <button class="btn-enviar">ENVIAR SOLICITAÇÃO</button>
-                    <button class="btn-cancelar" onclick="mostrarAviso()">CANCELAR SOLICITAÇÃO</button>
-                </div>
-  
-                <p class="status-livro">STATUS: <span class="badge-pendente">Pendente</span></p>
-            </div>
+        <div id="lista-solicitacoes">
           </div>
-        </div>
       </section>
 
       <section class="bloco-reserva">
         <h2>RESERVAS:</h2>
-        
-        <div class="item-livro">
-          <img src="img/livro2.png" alt="Capa do Livro" class="capa-livro">
-          
-          <div class="detalhes-livro">
-            <h3 class="titulo-livro">A PRIMAVERA DA LAGARTA</h3>
-            <p class="info-quantidade">Qt. <span>12</span></p>
-            <p class="info-periodo">PERÍODO DA RESERVA: <span>10/02 a 10/07</span></p>
-            
-            <div class="acoes-livro">
-              <p class="status-livro">STATUS: <span class="badge-ativa">Ativa</span></p>
-              <button class="btn-cancelar" onclick="mostrarAviso()">CANCELAR RESERVA</button>
-            </div>
+        <div id="lista-reservas">
           </div>
-        </div>
       </section>
 
     </div>
   </main>
 
   <script src="js/layout.js"></script>
-  <script src="js/app.js"></script>
-</body>
+  <script src="js/reservas.js"></script> </body>
 </html>
