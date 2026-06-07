@@ -20,15 +20,12 @@
 }
 
 .devolucoes-titulo {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 42px;
-  font-weight: bold;
-  color: #3b2a1a; /* Marrom escuro do Canva */
-  text-align: left;
+  text-align: center;
+  color: #8b6c51; /* Marrom escuro do texto do Canva */
+  font-size: 36px;
   margin-bottom: 40px;
-  letter-spacing: 1px;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
-
 /* ==========================================================================
    ESTILO DOS CARDS DE LIVROS
    ========================================================================== */
@@ -55,6 +52,7 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 .titulo-livro {
@@ -63,6 +61,7 @@
   color: #000000;
   font-weight: bold;
   margin: 0;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 /* Linha que agrupa o "Qt. X" e o Botão lado a lado */
@@ -105,4 +104,21 @@
 
 .btn-devolutiva:hover {
   opacity: 0.9;
+}
+.reservas-container, .reservas-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita que a página crie rolagem para os lados por erro de tamanho */
 }

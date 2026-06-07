@@ -3,7 +3,7 @@
 ========================== */
 
 .header {
-  background-color: #9b7b5d;
+  background-color: #8b6c51;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +21,7 @@
   gap: 5px;
   cursor: pointer;
   padding: 5px;
+
 }
 
 .menu-hamburguer span {
@@ -66,6 +67,7 @@
   display: flex;
   align-items: center;
   gap: 25px;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 .usuario {

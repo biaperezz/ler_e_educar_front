@@ -1,52 +1,112 @@
+/* ==========================================================================
+   RESET PADRÃO (Sempre no topo do arquivo específico para garantir)
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   CONTAINER DE FUNDO (Estica de ponta a ponta na tela)
+   ========================================================================== */
+.perfil-adm-bg.fundo-canva {
+  background: url("../img/tela-escolha-de-livro.png") no-repeat center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  width: 100% !important;
+  min-height: calc(100vh - 60px) !important; /* Desconta o tamanho do header */
+  margin: 0 !important;
+  padding: 50px 0 !important; /* Padding apenas vertical */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente o bloco de conteúdo */
+  align-items: flex-start;
+}
+
+/* ==========================================================================
+   BLOCO DE CONTEÚDO (Controla o limite de largura do texto)
+   ========================================================================== */
 .perfil-adm-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px 40px;
+  width: 100%;
+  max-width: 1000px; /* Alinha o tamanho do formulário com o resto do site */
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 .perfil-adm-container h1 {
-    color: #5a3f28;
-    font-size: 42px;
-    margin-bottom: 10px;
+  color: #8b6c51; /* Marrom escuro do texto do Canva */
+  font-family: 'Georgia', 'Times New Roman', serif; 
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .subtitulo {
-    font-size: 22px;
-    margin-bottom: 40px;
-    color: #3d2b1f;
+  font-family: 'Georgia', 'Times New Roman', serif; 
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: #3d2b1f;
 }
 
+footer {
+  margin-top: auto;
+  background-color: #8b6c51;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 15px;
+}
+
+/* ==========================================================================
+   FORMULÁRIO E CAMPOS
+   ========================================================================== */
 .perfil-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
 }
 
 .linha {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
+  width: 100%;
 }
 
 .campo {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 .campo-pequeno {
-    max-width: 250px;
+  max-width: 250px;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 .campo label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #3d2b1f;
+  font-family: 'Georgia', 'Times New Roman', serif; 
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #3d2b1f;
 }
 
 .campo input {
-    background: #ededed;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    font-size: 15px;
+  background: #ededed;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  width: 100%;
+  font-family: Arial, sans-serif;
 }

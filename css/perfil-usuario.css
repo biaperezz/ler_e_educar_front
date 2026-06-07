@@ -21,7 +21,7 @@
 
 .perfil-titulo {
   font-size: 32px;
-  color: #3b2a1a; /* Marrom escuro do texto do Canva */
+  color: #8b6c51; /* Marrom escuro do texto do Canva */
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -37,6 +37,15 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #8b6c51;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 15px;
 }
 
 /* ==========================================================================
@@ -80,4 +89,17 @@
 .perfil-container, .perfil-formulario {
   display: flex;
   flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita que a página crie rolagem para os lados por erro de tamanho */
 }

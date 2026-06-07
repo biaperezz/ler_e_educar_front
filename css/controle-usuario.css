@@ -1,5 +1,13 @@
-.pagina-usuarios{
-    padding: 40px;
+.pagina-usuarios-bg.fundo-canva {
+  background: url("../img/tela-escolha-de-livro.png") no-repeat center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  min-height: calc(100vh - 80px);
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .usuarios-container{

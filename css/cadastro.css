@@ -73,6 +73,7 @@ body::before {
   display: flex;
 
   flex-direction: column;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 
@@ -146,6 +147,7 @@ input {
 .titulo-gestor {
 
   margin-top: 40px;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }
 
 
@@ -187,4 +189,5 @@ input {
 .titulo-confirmacao {
 
   margin-top: 25px;
+  font-family: 'Georgia', 'Times New Roman', serif; 
 }

@@ -13,7 +13,7 @@
 
 .pagina-titulo {
   text-align: center;
-  color: #5a3f2a;
+  color: #8b6c51;
   font-size: 36px;
   margin-bottom: 40px;
 }
@@ -58,16 +58,47 @@
 .btn-aprovar {
   background: #a3b899;
   border: none;
-  padding: 10px 20px;
+  padding: 6px 20px !important;
   cursor: pointer;
   font-weight: bold;
+  font-family: Arial, sans-serif !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  cursor: pointer;
+  border-radius: 4px !important;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  transition: opacity 0.2s;
 }
 
 .btn-negar {
   background: #9c4a2b;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 6px 20px !important;
   cursor: pointer;
   font-weight: bold;
+  font-family: Arial, sans-serif !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  cursor: pointer;
+  border-radius: 4px !important;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  transition: opacity 0.2s;
+}
+.reservas-container, .reservas-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita que a página crie rolagem para os lados por erro de tamanho */
 }
